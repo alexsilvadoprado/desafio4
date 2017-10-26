@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.lblFrase = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbFrase = new System.Windows.Forms.TextBox();
+            this.btnAnalisar = new System.Windows.Forms.Button();
+            this.lblFrequencia = new System.Windows.Forms.Label();
+            this.txbFrequencia = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblFrase
@@ -41,28 +44,60 @@
             this.lblFrase.TabIndex = 0;
             this.lblFrase.Text = "Digite uma frase para análise:";
             // 
-            // textBox1
+            // txbFrase
             // 
-            this.textBox1.AcceptsReturn = true;
-            this.textBox1.Location = new System.Drawing.Point(13, 30);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(680, 120);
-            this.textBox1.TabIndex = 1;
+            this.txbFrase.AcceptsReturn = true;
+            this.txbFrase.Location = new System.Drawing.Point(13, 30);
+            this.txbFrase.Multiline = true;
+            this.txbFrase.Name = "txbFrase";
+            this.txbFrase.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txbFrase.Size = new System.Drawing.Size(680, 120);
+            this.txbFrase.TabIndex = 1;
+            // 
+            // btnAnalisar
+            // 
+            this.btnAnalisar.Location = new System.Drawing.Point(268, 156);
+            this.btnAnalisar.Name = "btnAnalisar";
+            this.btnAnalisar.Size = new System.Drawing.Size(162, 31);
+            this.btnAnalisar.TabIndex = 2;
+            this.btnAnalisar.Text = "ANALISAR FREQUÊNCIA";
+            this.btnAnalisar.UseVisualStyleBackColor = true;
+            this.btnAnalisar.Click += new System.EventHandler(this.btnAnalisar_Click);
+            // 
+            // lblFrequencia
+            // 
+            this.lblFrequencia.AutoSize = true;
+            this.lblFrequencia.Location = new System.Drawing.Point(13, 192);
+            this.lblFrequencia.Name = "lblFrequencia";
+            this.lblFrequencia.Size = new System.Drawing.Size(122, 13);
+            this.lblFrequencia.TabIndex = 3;
+            this.lblFrequencia.Text = "Frequência de Palavras:";
+            // 
+            // txbFrequencia
+            // 
+            this.txbFrequencia.Location = new System.Drawing.Point(16, 208);
+            this.txbFrequencia.Multiline = true;
+            this.txbFrequencia.Name = "txbFrequencia";
+            this.txbFrequencia.ReadOnly = true;
+            this.txbFrequencia.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txbFrequencia.Size = new System.Drawing.Size(677, 134);
+            this.txbFrequencia.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(705, 354);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbFrequencia);
+            this.Controls.Add(this.lblFrequencia);
+            this.Controls.Add(this.btnAnalisar);
+            this.Controls.Add(this.txbFrase);
             this.Controls.Add(this.lblFrase);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Desafio 4";
+            this.Text = "Desafio 4 - FREQUÊNCIA DE PALAVRAS";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -71,7 +106,10 @@
         #endregion
 
         private System.Windows.Forms.Label lblFrase;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbFrase;
+        private System.Windows.Forms.Button btnAnalisar;
+        private System.Windows.Forms.Label lblFrequencia;
+        private System.Windows.Forms.TextBox txbFrequencia;
     }
 }
 
