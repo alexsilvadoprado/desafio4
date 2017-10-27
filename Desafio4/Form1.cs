@@ -26,12 +26,14 @@ namespace Desafio4
             /** string para receber a frequência das palavras */
             string textoFrequencia = "";
 
+            /** Remove caracteres especiais e espaço no final da frase */
+            frase = Regex.Replace(frase, "([^a-zA-Zà-úÀ-Ú0-9])+", " ", RegexOptions.Compiled);
+            frase = frase.EndsWith(" ") ? frase.Remove(frase.Length - 1) : frase;
+
+            /** Não faz nada se a frase for vazia */
             if (string.IsNullOrEmpty(frase))
                 return;
 
-            /** Remove caracteres especiais e espaço no final da frase */
-            frase = Regex.Replace(frase, "[^a-zA-Zà-úÀ-Ú0-9]+( ){2,}", "", RegexOptions.Compiled);
-            frase = frase.EndsWith(" ") ? frase.Remove(frase.Length - 1) : frase;
             /** quebra a frase em palavras a partir dos espaços */
             string[] split = frase.Split(' ');
 
